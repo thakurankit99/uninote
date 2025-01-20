@@ -53,13 +53,6 @@ const AccessTokenSection = () => {
     <div className="mt-6 w-full flex flex-col justify-start items-start space-y-4">
       <div className="w-full">
         <div className="sm:flex sm:items-center sm:justify-between">
-          <div className="sm:flex-auto space-y-1">
-            <p className="flex flex-row justify-start items-center font-medium text-gray-700 dark:text-gray-400">
-              {t("setting.access-token-section.title")}
-              <LearnMore className="ml-2" url="https://usememos.com/docs/security/access-tokens" />
-            </p>
-            <p className="text-sm text-gray-700 dark:text-gray-500">{t("setting.access-token-section.description")}</p>
-          </div>
           <div className="mt-4 sm:mt-0">
             <Button
               color="primary"

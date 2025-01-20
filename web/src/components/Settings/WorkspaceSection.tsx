@@ -68,7 +68,7 @@ const WorkspaceSection = () => {
       <div className="w-full flex flex-row justify-between items-center">
         <div>
           {t("setting.system-section.server-name")}:{" "}
-          <span className="font-mono font-bold">{workspaceGeneralSetting.customProfile?.title || "Memos"}</span>
+          <span className="font-mono font-bold">{workspaceGeneralSetting.customProfile?.title || "Unihub Notes"}</span>
         </div>
         <Button variant="outlined" onClick={handleUpdateCustomizedProfileButtonClick}>
           {t("common.edit")}
@@ -107,16 +107,6 @@ const WorkspaceSection = () => {
         value={workspaceGeneralSetting.additionalScript}
         onChange={(event) => updatePartialSetting({ additionalScript: event.target.value })}
       />
-      <div className="w-full">
-        <Link
-          className="text-gray-500 text-sm flex flex-row justify-start items-center hover:underline hover:text-blue-600"
-          to="https://usememos.com/docs/advanced-settings/custom-style-and-script"
-          target="_blank"
-        >
-          {t("common.learn-more")}
-          <ExternalLinkIcon className="inline w-4 h-auto ml-1" />
-        </Link>
-      </div>
       <div className="w-full flex flex-row justify-between items-center">
         <span>{t("setting.workspace-section.disallow-user-registration")}</span>
         <Switch

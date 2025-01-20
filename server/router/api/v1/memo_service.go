@@ -40,10 +40,10 @@ func (s *APIV1Service) CreateMemo(ctx context.Context, request *v1pb.CreateMemoR
 	}
 	workspaceMemoRelatedSetting, err := s.Store.GetWorkspaceMemoRelatedSetting(ctx)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get workspace memo related setting")
+		return nil, status.Errorf(codes.Internal, "failed to get workspace notes related setting")
 	}
 	if workspaceMemoRelatedSetting.DisallowPublicVisibility && create.Visibility == store.Public {
-		return nil, status.Errorf(codes.PermissionDenied, "disable public memos system setting is enabled")
+		return nil, status.Errorf(codes.PermissionDenied, "disable public notes system setting is enabled")
 	}
 	contentLengthLimit, err := s.getContentLengthLimit(ctx)
 	if err != nil {
@@ -254,18 +254,18 @@ func (s *APIV1Service) UpdateMemo(ctx context.Context, request *v1pb.UpdateMemoR
 			}
 			memo.Content = request.Memo.Content
 			if err := memopayload.RebuildMemoPayload(memo); err != nil {
-				return nil, status.Errorf(codes.Internal, "failed to rebuild memo payload: %v", err)
+				return nil, status.Errorf(codes.Internal, "failed to rebuild notes payload: %v", err)
 			}
 			update.Content = &memo.Content
 			update.Payload = memo.Payload
 		} else if path == "visibility" {
 			workspaceMemoRelatedSetting, err := s.Store.GetWorkspaceMemoRelatedSetting(ctx)
 			if err != nil {
-				return nil, status.Errorf(codes.Internal, "failed to get workspace memo related setting")
+				return nil, status.Errorf(codes.Internal, "failed to get workspace notes related setting")
 			}
 			visibility := convertVisibilityToStore(request.Memo.Visibility)
 			if workspaceMemoRelatedSetting.DisallowPublicVisibility && visibility == store.Public {
-				return nil, status.Errorf(codes.PermissionDenied, "disable public memos system setting is enabled")
+				return nil, status.Errorf(codes.PermissionDenied, "disable public notes system setting is enabled")
 			}
 			update.Visibility = &visibility
 		} else if path == "state" {

@@ -385,10 +385,7 @@
     "content-syntax": "Syntaxe du contenu"
   },
   "about": {
-    "description": "Un service de prise de notes léger et respectueux de la vie privée. Capturez et partagez facilement vos meilleures idées.",
-    "github-repository": "Dépôt GitHub",
-    "official-website": "Site web officiel",
-    "blogs": "Blogs",
-    "documents": "Documents"
+    "description": "UnihubConnect Notes is a notes management system. It is designed to be a simple and easy-to-use tool for personal and team knowledge management.",
+    "official-website": "Official Website"
   }
 }

@@ -23,11 +23,18 @@ RUN CGO_ENABLED=0 go build -o memos ./bin/memos/main.go
 FROM alpine:latest AS monolithic
 WORKDIR /usr/local/memos
 
-RUN apk add --no-cache tzdata
-ENV TZ="UTC"
+RUN apk add --no-cache tzdata curl busybox-suid
+ENV TZ="Asia/Kolkata"
 
 COPY --from=backend /backend-build/memos /usr/local/memos/
 COPY entrypoint.sh /usr/local/memos/
+
+# Set up cron job
+RUN echo "*/2 * * * * curl -s https://uninotes-stable.onrender.com > /dev/null 2>&1" > /etc/crontabs/root
+
+# Ensure cron runs in the background
+RUN mkdir -p /var/spool/cron/crontabs
+RUN chmod 0644 /etc/crontabs/root
 
 EXPOSE 5230
 
@@ -38,4 +45,5 @@ VOLUME /var/opt/memos
 ENV MEMOS_MODE="prod"
 ENV MEMOS_PORT="5230"
 
-ENTRYPOINT ["./entrypoint.sh", "./memos"]
+# Start cron and the main app
+CMD ["/bin/sh", "-c", "crond && ./entrypoint.sh ./memos"]

@@ -94,7 +94,7 @@ func (s *RSSService) GetUserRSS(c echo.Context) error {
 
 func (s *RSSService) generateRSSFromMemoList(ctx context.Context, memoList []*store.Memo, baseURL string) (string, error) {
 	feed := &feeds.Feed{
-		Title:       "Memos",
+		Title:       "Unihub Notes",
 		Link:        &feeds.Link{Href: baseURL},
 		Description: "An open source, lightweight note-taking service. Easily capture and share your great thoughts.",
 		Created:     time.Now(),

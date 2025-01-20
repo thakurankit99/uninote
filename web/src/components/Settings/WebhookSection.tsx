@@ -108,16 +108,6 @@ const WebhookSection = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-2">
-        <Link
-          className="text-gray-500 text-sm inline-flex flex-row justify-start items-center hover:underline hover:text-blue-600"
-          to="https://usememos.com/docs/advanced-settings/webhook"
-          target="_blank"
-        >
-          {t("common.learn-more")}
-          <ExternalLinkIcon className="inline w-4 h-auto ml-1" />
-        </Link>
-      </div>
     </div>
   );
 };

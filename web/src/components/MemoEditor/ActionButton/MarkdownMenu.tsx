@@ -77,7 +77,7 @@ const MarkdownMenu = (props: Props) => {
           <span>{t("markdown.checkbox")}</span>
         </MenuItem>
         <div className="-mt-0.5 pl-2">
-          <Link fontSize={12} href="https://www.usememos.com/docs/getting-started/content-syntax" target="_blank">
+        <Link fontSize={12} href="https://www.unihubconnect.com/unihub_notes_guide.pdf" target="_blank">
             {t("markdown.content-syntax")}
           </Link>
         </div>

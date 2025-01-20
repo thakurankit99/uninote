@@ -109,13 +109,13 @@
     "count-memos-in-date": "{{count}} {{memos}} in {{date}}",
     "delete-confirm": "Are you sure you want to delete this memo? THIS ACTION IS IRREVERSIBLE",
     "load-more": "Load more",
-    "no-archived-memos": "No archived memos.",
-    "search-placeholder": "Search memos",
+    "no-archived-memos": "No archived Notes.",
+    "search-placeholder": "Search Notes",
     "show-more": "Show more",
     "show-less": "Show less",
     "view-detail": "View Detail",
     "visibility": {
-      "disabled": "Public memos are disabled",
+      "disabled": "Public Notes are disabled",
       "private": "Private",
       "protected": "Workspace",
       "public": "Public"
@@ -135,7 +135,7 @@
   },
   "message": {
     "archived-successfully": "Archived successfully",
-    "change-memo-created-time": "Change memo created time",
+    "change-memo-created-time": "Change notes created time",
     "copied": "Copied",
     "deleted-successfully": "Deleted successfully",
     "fill-all": "Please fill in all fields.",
@@ -150,7 +150,7 @@
     "update-succeed": "Update succeeded",
     "user-not-found": "User not found",
     "remove-completed-task-list-items-successfully": "The removal was successful",
-    "failed-to-embed-memo": "Failed to embed memo",
+    "failed-to-embed-memo": "Failed to embed note",
     "description-is-required": "Description is required",
     "fill-all-required-fields": "Please fill all required fields"
   },
@@ -203,7 +203,7 @@
       "export-memos": "Export Memos",
       "nickname-note": "Displayed in the banner",
       "openapi-reset": "Reset OpenAPI Key",
-      "openapi-sample-post": "Hello #memos from {{url}}",
+      "openapi-sample-post": "Hello #notes from {{url}}",
       "openapi-title": "OpenAPI",
       "reset-api": "Reset API",
       "title": "Account Information",
@@ -228,7 +228,7 @@
     "preference": "Preferences",
     "preference-section": {
       "default-memo-sort-option": "Memo display time",
-      "default-memo-visibility": "Default memo visibility",
+      "default-memo-visibility": "Default notes visibility",
       "theme": "Theme"
     },
     "sso": "SSO",
@@ -307,7 +307,7 @@
       "disable-password-login": "Disable password login",
       "disable-password-login-final-warning": "Please type \"CONFIRM\" if you know what you are doing.",
       "disable-password-login-warning": "This will disable password login for all users. It is not possible to log in without reverting this setting in the database if your configured identity providers fail. You’ll also have to be extra carefull when removing an identity provider",
-      "disable-public-memos": "Disable public memos",
+      "disable-public-memos": "Disable public notes",
       "disable-markdown-shortcuts-in-editor": "Disable Markdown shortcuts in editor",
       "display-with-updated-time": "Display with updated time",
       "enable-auto-compact": "Enable auto compact",
@@ -362,10 +362,10 @@
       "monday": "Monday"
     },
     "memo-related-settings": {
-      "title": "Memo related settings",
+      "title": "Notes related settings",
       "enable-link-preview": "Enable link preview",
-      "enable-memo-comments": "Enable memo comments",
-      "enable-memo-location": "Enable memo location",
+      "enable-memo-comments": "Enable notes comments",
+      "enable-memo-location": "Enable notes location",
       "content-lenght-limit": "Content length limit (Byte)",
       "reactions": "Reactions"
     },
@@ -375,20 +375,17 @@
     "all-tags": "All Tags",
     "create-tag": "Create Tag",
     "create-tags-guide": "You can create tags by inputting `#tag`.",
-    "delete-confirm": "Are you sure to delete this tag? All related memos will be archived.",
+    "delete-confirm": "Are you sure to delete this tag? All related notes will be archived.",
     "delete-tag": "Delete Tag",
     "no-tag-found": "No tag found"
   },
   "markdown": {
     "code-block": "Code block",
     "checkbox": "Checkbox",
-    "content-syntax": "Content syntax"
+    "content-syntax": "Content Guide"
   },
   "about": {
-    "description": "A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts.",
-    "github-repository": "GitHub Repo",
-    "official-website": "Official Website",
-    "blogs": "Blogs",
-    "documents": "Documents"
+    "description": "UnihubConnect Notes is a notes management system. It is designed to be a simple and easy-to-use tool for personal and team knowledge management.",
+    "official-website": "Official Website"
   }
 }
