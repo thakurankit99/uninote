@@ -131,7 +131,7 @@
     "direction": "Direction",
     "direction-desc": "Descending",
     "direction-asc": "Ascending",
-    "no-memos": "No memos."
+    "no-memos": "No notes."
   },
   "message": {
     "archived-successfully": "Archived successfully",
@@ -157,7 +157,7 @@
   "reference": {
     "add-references": "Add references",
     "embedded-usage": "Use as Embedded Content",
-    "no-memos-found": "No memos found",
+    "no-memos-found": "No notes found",
     "search-placeholder": "Search content"
   },
   "resource": {
